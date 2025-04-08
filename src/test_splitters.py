@@ -1,9 +1,6 @@
 import unittest
 
-from textnode import TextType, TextNode
-import leafnode
-import htmlnode
-import parentnode
+from nodes import TextNode, TextType
 from splitters import split_nodes_delimiter, extract_markdown_images, extract_markdown_links, split_nodes_image, split_nodes_link, text_to_textnode
 
 class Splitters(unittest.TestCase):
@@ -125,3 +122,6 @@ class Splitters(unittest.TestCase):
         text = "Hello World!"
         new_nodes = text_to_textnode(text)
         self.assertListEqual([TextNode("Hello World!", TextType.TEXT)], new_nodes)
+
+if __name__ == "__main__":
+    unittest.main()
