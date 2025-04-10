@@ -207,7 +207,7 @@ These are other books he wrote:
         node = markdown_to_html_node(md)
         html = node.to_html()
         self.assertEqual(html,
-        "<div><blockquote>This is a very famous quote</blockquote><p>The quote is by a well-known author</p><p>These are other books he wrote:</p><ul><li>Book one</li><li>Book two</li><li>Book three</li></ul>bootdev run 1d9f9063-4163-4b0e-ba00-397f7e7d37b9 -s</div>"
+        "<div><blockquote>This is a very famous quote</blockquote><p>The quote is by a well-known author</p><p>These are other books he wrote:</p><ul><li>Book one</li><li>Book two</li><li>Book three</li></ul></div>"
     )
 
 

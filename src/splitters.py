@@ -276,7 +276,6 @@ def cleaner(text, text_type):
                 l = l.strip()
                 l = "<li>" + l[3:] + "</li>"
                 ls.append(l)
-        print(ls)
         return ("").join(ls)
     elif text_type == BlockType.UNORDERED_LIST:
         ls = []
@@ -291,11 +290,11 @@ def cleaner(text, text_type):
         for l in text.split("\n"):
             if l != "":
                 l = l.strip()
-                l = l[1:]
+                l = l[1:].strip()
                 ls.append(l)
         return (" ").join(ls)
     elif text_type == BlockType.HEADING:
-        return text[heading_count(text, text_type):]
+        return text[heading_count(text, text_type):].strip()
     else:
         return text.replace("\n", " ")
 
